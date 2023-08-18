@@ -70,9 +70,10 @@ const Spacer = styled.div`
 
 const CloseButton = styled(UnstyledButton)`
   position: absolute;
+  padding: 16px;
 
-  top: 26px;
-  right: 16px;
+  top: 10px;
+  right: 0;
 `;
 
 const Nav = styled.nav`
