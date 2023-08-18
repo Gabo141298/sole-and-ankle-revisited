@@ -22,7 +22,7 @@ const MobileMenu = ({ isOpen, onDismiss }) => {
         </CloseButton>
         <Spacer />
         <Nav>
-          <NavLink href="/sale" selected={true}>Sale</NavLink>
+          <NavLink href="/sale">Sale</NavLink>
           <NavLink href="/new">New&nbsp;Releases</NavLink>
           <NavLink href="/men">Men</NavLink>
           <NavLink href="/women">Women</NavLink>
@@ -90,7 +90,11 @@ const NavLink = styled.a`
 
   text-decoration: none;
 
-  color: ${props => props.selected ? COLORS.secondary : COLORS.gray[900]};
+  color: ${COLORS.gray[900]};
+
+  &:first-of-type {
+    color: ${COLORS.secondary};
+  }
 `;
 
 const Footer = styled.footer`
