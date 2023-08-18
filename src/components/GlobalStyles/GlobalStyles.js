@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components/macro';
+import { COLORS, WEIGHTS } from '../../constants';
 
 const GlobalStyles = createGlobalStyle`
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -76,6 +77,29 @@ html {
 html, body, #root {
   height: 100%;
 }
+
+/* Color variables definition */
+html {
+  --color-white: hsl(${COLORS.white});
+
+  --color-gray-100: hsl(${COLORS.gray[100]});
+  --color-gray-300: hsl(${COLORS.gray[300]});
+  --color-gray-500: hsl(${COLORS.gray[500]});
+  --color-gray-700: hsl(${COLORS.gray[700]});
+  --color-gray-900: hsl(${COLORS.gray[900]});
+  --color-gray-700-transparent: hsl(${COLORS.gray[700]} / 0.8);
+
+  --color-primary: hsl(${COLORS.primary});
+  --color-secondary: hsl(${COLORS.secondary});
+}
+
+/* Font weight variables definition */
+html {
+  --weight-normal: ${WEIGHTS.normal};
+  --weight-medium: ${WEIGHTS.medium};
+  --weight-bold: ${WEIGHTS.bold};
+}
+
 `;
 
 export default GlobalStyles;
